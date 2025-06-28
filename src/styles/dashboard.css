@@ -1,0 +1,93 @@
+.dashboard-container {
+  padding: 30px 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+}
+
+.learning-progress {
+  margin-bottom: 40px;
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.learning-progress h2 {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.topics-section h2 {
+  margin-bottom: 20px;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.topic-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topic-card h3 {
+  margin-bottom: 15px;
+}
+
+.topic-card .progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topic-card .progress-bar {
+  flex: 1;
+  height: 6px;
+}
+
+.topic-card .progress-fill {
+  background-color: var(--secondary-color);
+}
+
+.topic-card span {
+  font-size: 14px;
+  color: var(--light-text);
+}
