@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useAuth } from '../context/AuthContext'
-import './styles/header.css'
+import '../../src/app/styles/header.module.css'
 
 
 export default function Header() {
