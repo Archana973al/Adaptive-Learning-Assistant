@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { useParams } from 'next/navigation'
 import Quiz from '../../../components/Quiz'
 import { QUESTIONS } from '../../../data/quizData'
+import './styles/learn.css';  // Relative to page.tsx
 
 export default function QuizPage() {
   const params = useParams()
