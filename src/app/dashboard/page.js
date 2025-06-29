@@ -6,8 +6,7 @@ import { useEffect } from 'react'
 import LearningPath from '../../components/LearningPath'
 import TopicCard from '../../components/TopicCard'
 import ProgressTracker from '../../components/ProgressTracker'
-import '../../styles/dashboard.css'
-import '../../styles/quiz.css'
+import styles from './dashboard.module.css'
 
 export default function Dashboard() {
   const { user, loading, logout } = useAuth()
@@ -21,7 +20,7 @@ export default function Dashboard() {
   }, [user, loading, router])
 
   if (loading || !user) {
-    return <div className="loading">Loading...</div>
+    return <div className={styles.loading}>Loading...</div>
   }
 
   const topics = [
@@ -31,7 +30,6 @@ export default function Dashboard() {
     { id: 'programming', title: 'Programming', progress: 85 },
   ]
 
-  // Get recent quiz results
   const recentResults = results.slice(0, 2).map(result => ({
     topic: result.topic,
     score: result.percentage,
@@ -39,19 +37,19 @@ export default function Dashboard() {
   }))
 
   return (
-    <div className="dashboard-container">
-      <div className="dashboard-header">
+    <div className={styles.container}>
+      <div className={styles.header}>
         <div>
           <h1>Welcome back, {user.email}</h1>
-          <p className="welcome-message">Continue your learning journey</p>
+          <p className={styles.welcomeMessage}>Continue your learning journey</p>
         </div>
         <button onClick={logout} className="btn btn-secondary">
           Logout
         </button>
       </div>
       
-      <div className="dashboard-content">
-        <div className="left-panel">
+      <div className={styles.content}>
+        <div className={styles.leftPanel}>
           <div className="learning-progress">
             <h2>Your Learning Progress</h2>
             <LearningPath progress={65} />
@@ -62,10 +60,10 @@ export default function Dashboard() {
           </div>
         </div>
         
-        <div className="right-panel">
+        <div className={styles.rightPanel}>
           <div className="topics-section">
             <h2>Recommended Topics</h2>
-            <div className="topics-grid">
+            <div className={styles.topicsGrid}>
               {topics.map(topic => (
                 <TopicCard key={topic.id} topic={topic} />
               ))}
@@ -74,12 +72,12 @@ export default function Dashboard() {
           
           <div className="recent-activity">
             <h2>Recent Activity</h2>
-            <div className="activity-list">
+            <div className={styles.activityList}>
               {recentResults.length > 0 ? (
                 recentResults.map((activity, index) => (
-                  <div key={index} className="activity-item">
+                  <div key={index} className={styles.activityItem}>
                     <span>Completed {activity.topic} Quiz</span>
-                    <span className="activity-score">{activity.score}%</span>
+                    <span className={styles.activityScore}>{activity.score}%</span>
                   </div>
                 ))
               ) : (
