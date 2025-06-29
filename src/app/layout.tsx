@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 // src/app/layout.tsx
-import 'C:\Users\HP\Desktop\student\Personalized-Education-AI-Powered-Learning-Teaching\adaptive-learning-assistant\src\globals.css'  // Adjust path as needed
+import './globals/globals.css'
 import Header from '../components/Header'
 import { AuthProvider } from '../context/AuthContext'
 import { QuizProvider } from '../context/QuizContext'
