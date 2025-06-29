@@ -1,8 +1,9 @@
 'use client'
+import './styles/autha.css'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '../../context/AuthContext'
-import '../../styles/auth.css'
+
 
 export default function Login() {
   const [email, setEmail] = useState('')

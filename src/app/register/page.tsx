@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '../../context/AuthContext'
-import '../../styles/auth.css'
+import '../styles/auth.css'
 
 export default function Register() {
   const [email, setEmail] = useState('')
