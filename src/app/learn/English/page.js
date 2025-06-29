@@ -1,7 +1,7 @@
 'use client'
 import { useParams } from 'next/navigation'
 import ChatInterface from '../../../components/ChatInterface'
-import './styles/learn.css'
+import 'C:\Users\HP\Desktop\student\Personalized-Education-AI-Powered-Learning-Teaching\adaptive-learning-assistant\src\app\learn\English\styles\English.module.css'
 
 export default function LearnTopic() {
   const params = useParams()
