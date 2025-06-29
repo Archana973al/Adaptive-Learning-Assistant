@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { useParams } from 'next/navigation'
 import Quiz from '../../../components/Quiz'
 import { QUESTIONS } from '../../../data/quizData'
-import 'C:\Users\HP\Desktop\student\Personalized-Education-AI-Powered-Learning-Teaching\adaptive-learning-assistant\src\styles\learn.css';  // Relative to page.tsx
+import './styles/quiz.module.css';  // Relative to page.tsx
 
 export default function QuizPage() {
   const params = useParams()
