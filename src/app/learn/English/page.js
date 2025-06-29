@@ -27,17 +27,15 @@ export default function LearnTopic() {
   }
 
   return (
-    <div className="learn-container">
-      <h1>{topicData[topic]?.title || 'Topic'}</h1>
-      <p>{topicData[topic]?.description || 'Learn about this topic with our AI assistant.'}</p>
-      
-      <div className="learning-content">
-        <div className="content-section">
-          <h2>Interactive Learning</h2>
-          <p>Ask our AI assistant anything about {topicData[topic]?.title || 'this topic'}.</p>
-          <ChatInterface topic={topic} />
-        </div>
-      </div>
-    </div>
+    <div className={styles.container}>
+  <header className={styles.header}>
+    <h1 className={styles.title}>English Learning</h1>
+    <p className={styles.description}>Improve your English skills</p>
+  </header>
+  <div className={styles.content}>
+    {/* Your content */}
+  </div>
+</div>
+
   )
 }

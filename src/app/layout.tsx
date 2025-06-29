@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
-import '../styles/globals.css'
+// src/app/layout.tsx
+import '../../styles/globals.css'  // Adjust path as needed
 import Header from '../components/Header'
 import { AuthProvider } from '../context/AuthContext'
 import { QuizProvider } from '../context/QuizContext'
