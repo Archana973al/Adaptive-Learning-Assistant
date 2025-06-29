@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.css'
-import './styles/learn.css';
+import "C:\Users\HP\Desktop\student\Personalized-Education-AI-Powered-Learning-Teaching\adaptive-learning-assistant\src\styles\learn.css";
 
 export default function Home() {
   return (
